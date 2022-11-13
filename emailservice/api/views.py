@@ -1,8 +1,11 @@
+from azure.identity import DefaultAzureCredential
+from azure.communication.identity import CommunicationIdentityClient
 from azure.communication.email import EmailClient, EmailContent, EmailAddress, EmailRecipients, EmailMessage
 from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from env import CONNECTION_STRING
 
 
 class EmailAPI(APIView):
@@ -10,7 +13,7 @@ class EmailAPI(APIView):
         try:
             # Connect to the email client
             email_client = EmailClient.from_connection_string(
-                request.data.get('connectionString'))
+                CONNECTION_STRING)
 
             # Email details
             content = EmailContent(
