@@ -1,6 +1,8 @@
 # Azure Email Service
 A wrapper service created with the Azure Communication Services Python Email SDK to send Email messages. Built using Django and hosted on Azure App Services.
 
+![System Architecture](EmailServiceArchitecture.png)
+
 Below is a list of available api endpoints.
 
 ## POST
