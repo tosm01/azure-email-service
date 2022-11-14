@@ -11,7 +11,7 @@ https://myazureemailservice.azurewebsites.net/api/v1/email
 ### POST api/v1/email
 To send emails to specified recipients. Parameters are passed in using a JSON object.
 
-**Parameters**
+#### Parameters
 
 |          Name | Type   | Description                                                                                                                                                           |
 | -------------:|:-------:| --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -20,5 +20,5 @@ To send emails to specified recipients. Parameters are passed in using a JSON ob
 |     `recipient` | string  | The recipient of the Email
 |     `sender` | string  | The Azure registered Email address that will send the Email
 
-**Sample Email**
+#### Sample Email
 ![Sample Email](SampleEmail.png)
