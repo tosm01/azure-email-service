@@ -9,7 +9,7 @@ Below is a list of available api endpoints.
 https://myazureemailservice.azurewebsites.net/api/v1/email
 
 ### POST api/v1/email
-To send emails to specified recipients. Parameters are passed in using a JSON object.
+To send emails to a specified recipient. Parameters are passed in using a JSON object.
 
 #### Parameters
 
