@@ -17,3 +17,6 @@ To send emails to specified recipients. Parameters are passed in using a JSON ob
 |     `body` | string  | The body of the Email
 |     `recipient` | string  | The recipient of the Email
 |     `sender` | string  | The Azure registered Email address that will send the Email
+
+**Sample Email**
+![Sample Email](SampleEmail.png)
