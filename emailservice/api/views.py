@@ -12,8 +12,7 @@ class EmailAPI(APIView):
     def post(self, request, *args, **kwargs):
         try:
             # Connect to the email client
-            email_client = EmailClient.from_connection_string(
-                CONNECTION_STRING)
+            email_client = EmailClient.from_connection_string(CONNECTION_STRING)
 
             # Email details
             content = EmailContent(
