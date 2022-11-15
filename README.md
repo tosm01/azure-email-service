@@ -24,6 +24,6 @@ To send emails to a specified recipient. Parameters are passed in using a JSON o
 ![Sample Email](SampleEmail.png)
 
 ## Future Work
-- [ ] Replace connection strings with service principals for authentication.
-- [ ] Implement ability to allow clients to provide authentication credentials. (Note: Currently environment variables are used at the server side)
+- [ ] Replace connection strings with service principals for server-side authentication.
+- [ ] Enforce API keys so that clients have to provide authentication credentials to use the service. (Note: Currently access is restricted via CORS policies)
 - [ ] Add multi-recipients functionality
