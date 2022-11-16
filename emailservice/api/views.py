@@ -5,18 +5,18 @@ from django.http import HttpResponse
 from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.views import APIView
-from env import CONNECTION_STRINGS
+from env import REGISTERED_SENDERS_LIST
 
 class EmailAPI(APIView):
     def post(self, request, *args, **kwargs):
         sender = request.data.get('sender')
         
-        if sender not in CONNECTION_STRINGS:
+        if sender not in REGISTERED_SENDERS_LIST:
             return HttpResponse(content="Sender is not registered", status=status.HTTP_400_BAD_REQUEST)
 
         try:
             # Connect to the email client
-            email_client = EmailClient.from_connection_string(CONNECTION_STRINGS[sender])
+            email_client = EmailClient.from_connection_string(REGISTERED_SENDERS_LIST[sender])
 
             # Email details
             content = EmailContent(
